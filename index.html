@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="main.js"></script>
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <main>
+      <div class="password-container">
+        <span id="password">P4$5W0rD!</span>
+        <div>
+          <span id="copied" class="hidden">COPIED</span>
+          <img
+            id="copy-button"
+            src="assets/images/icon-copy.svg"
+            alt="copy icon"
+          />
+        </div>
+      </div>
+      <div class="password-options-container">
+        <div class="character-length-container">
+          <div class="character-length-text-container">
+            <span>Character Length</span>
+            <span id="password-length">10</span>
+          </div>
+          <input value="10" type="range" min="1" max="20" step="1" />
+        </div>
+        <div class="checkbox-container">
+          <div class="input-group">
+            <input type="checkbox" name="options" id="include-upper-case" />
+            <label for="include-upper-case">Include Uppercase Letters</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="options" id="include-lower-case" />
+            <label for="include-lower-case">Include Lowercase Letters</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="options" id="include-numbers" />
+            <label for="include-numbers">Include Numbers</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="options" id="include-symbols" />
+            <label for="include-symbols">Include Symbols</label>
+          </div>
+        </div>
+        <div class="strength-container">
+          <span>STRENGTH</span>
+          <div>
+            <span id="strength">MEDIUM</span>
+            <div class="strength-visual">
+              <div id="first" class="visual-item"></div>
+              <div id="second" class="visual-item"></div>
+              <div id="third" class="visual-item"></div>
+              <div id="fourth" class="visual-item empty"></div>
+            </div>
+          </div>
+        </div>
+        <button id="generate-button" type="submit">
+          GENERATE
+          <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#24232C"
+              d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+            />
+          </svg>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
